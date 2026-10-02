@@ -5,138 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Презентация · Кейс 8 · НДб-25-6</title>
 <style>
- /* ЦВЕТОВАЯ ПАЛИТРА */
-:root {
-  --navy: #1e3a5f;        /* Тёмно-синий */
-  --blue: #4a7fb5;        /* Средний синий */
-  --light-blue: #8fb8d6;  /* Светлый синий */
-  --accent: #ff6b35;      /* Оранжевый акцент */
-  --gray: #6b7280;        /* Серый текст */
-  --light: #f3f4f6;       /* Светлый фон */
-}
-
-/* ШРИФТЫ */
-body {
-  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #1a1a1a;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-/* СЛАЙДЫ */
-.slide {
-  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef4 100%);
-  padding: 60px 80px;
-}
-
-/* ЗАГОЛОВКИ */
-.slide-title {
-  color: var(--navy);
-  border-bottom: 4px solid var(--accent);
-  padding-bottom: 15px;
-  margin-bottom: 40px;
-}
-
-/* БЛОКИ С ПАРАМЕТРАМИ */
-.param-box {
-  background: white;
-  border-left: 4px solid var(--blue);
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: transform 0.2s;
-}
-
-.param-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-/* ТАБЛИЦЫ */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-th {
-  background: var(--navy);
-  color: white;
-  padding: 12px;
-  font-weight: 600;
-}
-
-td {
-  padding: 10px 12px;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-tr:hover {
-  background: var(--light);
-}
-
-/* КАРТЫ (плейсхолдеры) */
-.map-placeholder {
-  background: linear-gradient(135deg, var(--light-blue) 0%, var(--blue) 100%);
-  border: 3px solid var(--navy);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 600;
-  text-align: center;
-  padding: 40px;
-}
-
-/* P10-P50-P90 КАРТОЧКИ */
-.p10-card {
-  border-radius: 12px;
-  padding: 30px;
-  text-align: center;
-  border: 3px solid var(--navy);
-}
-
-.p10-card.p90 { 
-  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); 
-}
-.p10-card.p50 { 
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); 
-}
-.p10-card.p10 { 
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); 
-}
-
-/* ДОРОЖНАЯ КАРТА (Gantt) */
-.gantt-bar {
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-}
-
-/* НАВИГАЦИЯ */
-.nav-btn {
-  background: var(--navy);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.nav-btn:hover {
-  background: var(--accent);
-  transform: scale(1.1);
-}
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; background: #222; }
   
@@ -319,10 +187,6 @@ tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
-    font-size: 16px;
-    font-weight: 600;
-    position: relative;
   }
   .info-text {
     font-size: 15px;
@@ -402,10 +266,6 @@ tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
-    font-size: 16px;
-    font-weight: 600;
-    position: relative;
   }
   .block-result {
     background: #f0f0f0;
@@ -467,10 +327,6 @@ tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
-    font-size: 14px;
-    font-weight: 600;
-    position: relative;
   }
   .analog-caption {
     text-align: center;
@@ -558,9 +414,9 @@ tr:hover {
     color: #000;
     font-weight: 600;
   }
-  .p10-card.p90 { background: #ffcccc; }
-  .p10-card.p50 { background: #cce5ff; }
-  .p10-card.p10 { background: #ccffcc; }
+  .p10-card.p90 { background: #f5d5d5; }
+  .p10-card.p50 { background: #d5e5f5; }
+  .p10-card.p10 { background: #d5f5d5; }
   
   .p10-subtitle {
     text-align: center;
@@ -716,9 +572,7 @@ tr:hover {
 <section class="slide" id="slide4">
   <h2 class="slide-title">Общая информация</h2>
   <div class="slide-4-content">
-    <div class="map-container">
-      КАРТА ЯНВАРСКОГО МЕСТОРОЖДЕНИЯ
-    </div>
+    <div class="map-container"></div>
     <div class="info-text">
       <h3>Январское месторождение</h3>
       <p>Месторождение находится в северо-западной части полуострова Ямал в Нурминском нефтегазоносном районе.</p>
@@ -753,9 +607,7 @@ tr:hover {
         <b>B<sub>g</sub></b> = 0.00484 м³/м³
       </div>
     </div>
-    <div class="block block-map">
-      КАРТА ЭФФЕКТИВНЫХ<br>ГАЗОНАСЫЩЕННЫХ ТОЛЩИН
-    </div>
+    <div class="block block-map"></div>
     <div class="block">
       <h4>Алгоритм</h4>
       <div class="params-list">
@@ -789,9 +641,7 @@ tr:hover {
   <h2 class="slide-title">Аналоги для вероятностной оценки</h2>
   <div class="slide-6-content">
     <div style="display:flex;flex-direction:column;">
-      <div class="analog-map" style="flex:1;">
-        КАРТА ГАЗОВЫХ МЕСТОРОЖДЕНИЙ<br>ЗАПАДНОЙ СИБИРИ
-      </div>
+      <div class="analog-map" style="flex:1;"></div>
       <div class="analog-caption">Примеры пластов</div>
     </div>
     <div class="table-wrap">
