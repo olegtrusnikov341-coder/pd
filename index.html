@@ -38,7 +38,6 @@
     color: #fff;
     text-align: center;
     margin-bottom: 30px;
-    margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
@@ -392,7 +391,7 @@
     background: linear-gradient(135deg, rgba(0, 188, 212, 0.3) 0%, rgba(0, 229, 255, 0.2) 100%);
     border: 3px solid #00e5ff;
     border-radius: 12px;
-    padding: 25px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -403,7 +402,7 @@
   
   .block-result h4 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #fff;
     font-weight: 800;
     text-transform: uppercase;
@@ -413,7 +412,7 @@
   .block-result .results-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
     width: 100%;
   }
   
@@ -421,69 +420,40 @@
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid #fff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
   }
   
   .block-result .res-value {
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 900;
     color: #00e5ff;
-    margin: 10px 0;
+    margin: 5px 0;
     text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
   }
   
   .block-result .res-label {
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     font-weight: 600;
   }
   
   .block-result .note {
-    font-size: 13px;
-    margin-top: 15px;
+    font-size: 12px;
+    margin-top: 10px;
     color: #b0bec5;
   }
   
-  /* Таблица скважин */
-  .wells-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 13px;
-  }
-  
-  .wells-table th {
-    background: rgba(0, 188, 212, 0.3);
-    color: #00e5ff;
-    padding: 8px 6px;
-    text-align: center;
-    border: 1px solid #00e5ff;
-    font-weight: 700;
-    font-size: 12px;
-  }
-  
-  .wells-table td {
-    padding: 6px;
-    border: 1px solid rgba(0, 229, 255, 0.3);
-    text-align: center;
-    color: #fff;
-  }
-  
-  .wells-table tr.highlight {
-    background: rgba(0, 188, 212, 0.2);
-    font-weight: 700;
-  }
-  
-  /* SLIDE 6: АНАЛОГИ */
+  /* SLIDE 6: АНАЛОГИ — ИСПРАВЛЕННАЯ ТАБЛИЦА */
   .slide-6-content {
     display: grid;
-    grid-template-columns: 0.55fr 1.45fr;
+    grid-template-columns: 0.4fr 1.6fr;
     gap: 25px;
     flex: 1;
     align-items: stretch;
     margin-top: 10px;
     position: relative;
     z-index: 2;
+    min-height: 0;
   }
   
   .analog-map {
@@ -494,16 +464,23 @@
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     position: relative;
     box-shadow: 0 10px 40px rgba(0, 188, 212, 0.3);
+    min-height: 0;
+  }
+  
+  .analog-map-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   
   .analog-caption {
     text-align: center;
-    margin-top: 15px;
-    font-size: 16px;
+    margin-top: 12px;
+    font-size: 14px;
     color: #00e5ff;
     font-weight: 700;
     text-transform: uppercase;
@@ -511,41 +488,49 @@
   }
   
   .table-wrap {
-    overflow-x: auto;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid #00e5ff;
     border-radius: 12px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(10px);
+    height: 100%;
+    min-height: 0;
   }
   
   .analog-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
+    font-size: 13px;
+    table-layout: fixed;
     flex: 1;
   }
   
   .analog-table th {
     background: linear-gradient(90deg, #00bcd4, #00e5ff);
     color: #0a1929;
-    padding: 14px 10px;
+    padding: 10px 8px;
     text-align: left;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #00e5ff;
   }
   
   .analog-table td {
-    padding: 14px 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.15);
     color: #fff;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   
   .analog-table tr.highlight {
-    background: rgba(0, 188, 212, 0.3);
+    background: rgba(0, 188, 212, 0.25);
     font-weight: 700;
   }
   
@@ -858,7 +843,7 @@
           <div class="res-label">млн т конденсата</div>
         </div>
       </div>
-      <div class="note">A = 45 км², h = 15 м, P = 200 бар, T = 305 K</div>
+      <div class="note">A = 45 км², h = 15 м, P = 169.4 бар, T = 62 °C</div>
     </div>
   </div>
 </section>
@@ -867,9 +852,9 @@
 <section class="slide" id="slide6">
   <h2 class="slide-title">Аналоги для вероятностной оценки</h2>
   <div class="slide-6-content">
-    <div style="display:flex;flex-direction:column;">
+    <div class="analog-map-wrapper">
       <div class="analog-map" style="flex:1;">
-         КАРТА ЗАПАДНОЙ СИБИРИ
+        КАРТА ЗАПАДНОЙ СИБИРИ
       </div>
       <div class="analog-caption">Примеры пластов</div>
     </div>
@@ -877,14 +862,14 @@
       <table class="analog-table">
         <thead>
           <tr>
-            <th>Месторождение</th>
-            <th>Пласт</th>
-            <th>Площадь, км²</th>
-            <th>Толщина, м</th>
-            <th>Пористость</th>
-            <th>Насыщ. газ</th>
-            <th>Объём. коэф.</th>
-            <th>С5+, г/м³</th>
+            <th style="width:18%">Месторождение</th>
+            <th style="width:12%">Пласт</th>
+            <th style="width:12%">Площадь, км²</th>
+            <th style="width:10%">Толщина, м</th>
+            <th style="width:10%">Пористость</th>
+            <th style="width:12%">Насыщ. газ</th>
+            <th style="width:13%">Объём. коэф.</th>
+            <th style="width:13%">С5+, г/м³</th>
           </tr>
         </thead>
         <tbody>
