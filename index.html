@@ -14,7 +14,7 @@
     background: linear-gradient(135deg, #0a1929 0%, #1a3a5c 100%);
     display: none;
     flex-direction: column;
-    padding: 40px 60px;
+    padding: 30px 50px;
     position: relative;
     overflow: hidden;
     color: #fff;
@@ -37,11 +37,12 @@
     font-weight: 800;
     color: #fff;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
     z-index: 2;
+    flex-shrink: 0;
   }
   
   .slide-title::after {
@@ -50,7 +51,7 @@
     width: 100px;
     height: 4px;
     background: linear-gradient(90deg, #00bcd4, #00e5ff);
-    margin: 15px auto 0;
+    margin: 10px auto 0;
     border-radius: 2px;
   }
   
@@ -153,30 +154,30 @@
   .slide-3-content {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
-    gap: 30px;
+    gap: 25px;
     flex: 1;
     align-items: flex-start;
-    margin-top: 10px;
     position: relative;
     z-index: 2;
+    min-height: 0;
   }
   .gantt-chart {
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid #00e5ff;
     border-radius: 12px;
-    padding: 25px;
+    padding: 20px;
     backdrop-filter: blur(10px);
   }
   .gantt-chart table { width: 100%; border-collapse: collapse; }
   .gantt-chart th {
-    font-size: 12px; color: #00e5ff; padding: 10px 6px; text-align: center;
+    font-size: 12px; color: #00e5ff; padding: 8px 4px; text-align: center;
     border-bottom: 2px solid #00e5ff; font-weight: 700; text-transform: uppercase;
   }
   .gantt-chart td {
-    padding: 10px 6px; font-size: 13px; color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 4px; font-size: 13px; color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   .gantt-bar {
-    height: 22px; border-radius: 11px; position: relative; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    height: 20px; border-radius: 10px; position: relative; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
   .bar-blue { background: linear-gradient(90deg, #00bcd4, #00e5ff); }
   .bar-orange { background: linear-gradient(90deg, #ff9800, #ffb74d); }
@@ -189,31 +190,32 @@
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid #00e5ff;
     border-radius: 12px;
-    padding: 25px;
+    padding: 20px;
     backdrop-filter: blur(10px);
   }
   .owners-list h3 {
-    font-size: 20px; margin-bottom: 20px; color: #00e5ff; font-weight: 700; text-transform: uppercase;
+    font-size: 20px; margin-bottom: 15px; color: #00e5ff; font-weight: 700; text-transform: uppercase;
   }
-  .owners-list ol { padding-left: 25px; font-size: 15px; line-height: 2.2; color: #fff; }
+  .owners-list ol { padding-left: 20px; font-size: 14px; line-height: 2; color: #fff; }
   .owners-list li { font-weight: 600; }
   
   /* SLIDE 4: ОБЩАЯ ИНФОРМАЦИЯ */
   .slide-4-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 25px;
     flex: 1;
     align-items: flex-start;
-    margin-top: 10px;
     position: relative;
     z-index: 2;
+    min-height: 0;
   }
   .map-container {
     background: linear-gradient(135deg, #1a3a5c 0%, #0d47a1 100%);
     border: 3px solid #00e5ff;
     border-radius: 12px;
-    height: 400px;
+    height: 100%;
+    min-height: 380px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,58 +225,79 @@
     position: relative;
     box-shadow: 0 10px 40px rgba(0, 188, 212, 0.3);
   }
-  .info-text { font-size: 15px; line-height: 1.7; color: #e0e0e0; }
+  .info-text { font-size: 14px; line-height: 1.6; color: #e0e0e0; }
   .info-text h3 {
-    font-size: 24px; margin-bottom: 15px; color: #00e5ff; font-weight: 800; text-transform: uppercase;
+    font-size: 22px; margin-bottom: 12px; color: #00e5ff; font-weight: 800; text-transform: uppercase;
   }
-  .info-text p { margin-bottom: 12px; }
-  .info-params { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  .info-text p { margin-bottom: 10px; }
+  .info-params {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+  }
   .param-box {
     background: linear-gradient(135deg, rgba(0, 188, 212, 0.2) 0%, rgba(0, 229, 255, 0.1) 100%);
     border: 2px solid #00e5ff;
     border-radius: 8px;
-    padding: 14px;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 13px;
     color: #fff;
     font-weight: 600;
     box-shadow: 0 4px 12px rgba(0, 188, 212, 0.2);
   }
-  .param-box b { display: block; font-size: 20px; margin-bottom: 4px; color: #00e5ff; font-weight: 800; }
+  .param-box b {
+    display: block; font-size: 18px; margin-bottom: 4px; color: #00e5ff; font-weight: 800;
+  }
   
-  /* SLIDE 5: ПОДСЧЕТ ЗАПАСОВ */
+  /* SLIDE 5: ПОДСЧЕТ ЗАПАСОВ — ИСПРАВЛЕННЫЙ */
   .slide-5-content {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
     flex: 1;
-    margin-top: 10px;
     position: relative;
     z-index: 2;
+    min-height: 0;
   }
   .block {
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid #00e5ff;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px 20px;
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
   .block h4 {
-    font-size: 20px; margin-bottom: 15px; color: #00e5ff; font-weight: 800; text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00e5ff;
+    font-weight: 800;
+    text-transform: uppercase;
+    flex-shrink: 0;
   }
   .block .formula {
     font-family: 'Courier New', monospace;
-    font-size: 22px;
+    font-size: 20px;
     background: rgba(0, 188, 212, 0.1);
     border: 2px solid #00e5ff;
     border-radius: 8px;
-    padding: 15px;
+    padding: 12px;
     text-align: center;
-    margin: 10px 0;
+    margin: 8px 0;
     color: #fff;
     font-weight: 700;
+    flex-shrink: 0;
   }
-  .block .params-list { font-size: 14px; line-height: 1.9; color: #e0e0e0; }
+  .block .params-list {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #e0e0e0;
+    flex: 1;
+  }
   .block .params-list b { color: #00e5ff; font-weight: 700; }
   
   .block-map {
@@ -289,13 +312,14 @@
     font-weight: 700;
     position: relative;
     box-shadow: 0 10px 40px rgba(0, 188, 212, 0.3);
+    grid-row: span 2;
   }
   
   .block-result {
     background: linear-gradient(135deg, rgba(0, 188, 212, 0.3) 0%, rgba(0, 229, 255, 0.2) 100%);
     border: 3px solid #00e5ff;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -304,31 +328,67 @@
     box-shadow: 0 10px 40px rgba(0, 188, 212, 0.4);
   }
   .block-result h4 {
-    font-size: 22px; margin-bottom: 15px; color: #fff; font-weight: 800; text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    flex-shrink: 0;
   }
-  .block-result .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; }
-  .block-result .res-item { background: rgba(255, 255, 255, 0.1); border: 2px solid #fff; border-radius: 10px; padding: 15px; }
+  .block-result .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+  }
+  .block-result .res-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 12px;
+  }
   .block-result .res-value {
-    font-size: 36px; font-weight: 900; color: #00e5ff; margin: 5px 0; text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+    font-size: 36px;
+    font-weight: 900;
+    color: #00e5ff;
+    margin: 5px 0;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
   }
-  .block-result .res-label { font-size: 14px; color: #fff; font-weight: 600; }
-  .block-result .note { font-size: 12px; margin-top: 12px; color: #b0bec5; }
+  .block-result .res-label {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .block-result .note {
+    font-size: 11px;
+    margin-top: 8px;
+    color: #b0bec5;
+    flex-shrink: 0;
+  }
   
   /* SLIDE 6: АНАЛОГИ */
   .slide-6-content {
     display: grid;
     grid-template-columns: 0.45fr 1.55fr;
-    gap: 25px;
+    gap: 20px;
     flex: 1;
     align-items: stretch;
-    margin-top: 10px;
     position: relative;
     z-index: 2;
+    min-height: 0;
+  }
+  .analog-map-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   .analog-map {
     background: linear-gradient(135deg, #1a3a5c 0%, #0d47a1 100%);
     border: 3px solid #00e5ff;
     border-radius: 12px;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,7 +399,14 @@
     box-shadow: 0 10px 40px rgba(0, 188, 212, 0.3);
   }
   .analog-caption {
-    text-align: center; margin-top: 12px; font-size: 14px; color: #00e5ff; font-weight: 700; text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #00e5ff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    flex-shrink: 0;
   }
   .table-wrap {
     background: rgba(255, 255, 255, 0.05);
@@ -349,19 +416,25 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
-  .analog-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .analog-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    flex: 1;
+  }
   .analog-table th {
     background: linear-gradient(90deg, #00bcd4, #00e5ff);
     color: #0a1929;
-    padding: 12px 8px;
+    padding: 10px 8px;
     text-align: left;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
   }
   .analog-table td {
-    padding: 10px 8px;
+    padding: 8px;
     border-bottom: 1px solid rgba(0, 229, 255, 0.15);
     color: #fff;
   }
@@ -374,11 +447,14 @@
     flex-direction: column;
     flex: 1;
     justify-content: center;
-    margin-top: 10px;
     position: relative;
     z-index: 2;
   }
-  .p10-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; min-height: 380px; }
+  .p10-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
   .p10-card {
     padding: 30px 20px;
     border-radius: 16px;
@@ -387,25 +463,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 380px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
   }
-  .p10-card .label { font-size: 16px; letter-spacing: 2px; margin-bottom: 20px; color: #fff; font-weight: 700; text-transform: uppercase; }
-  .p10-card .value { font-size: 72px; font-weight: 900; margin: 10px 0; color: #fff; line-height: 1; text-shadow: 0 0 30px rgba(255, 255, 255, 0.5); }
+  .p10-card .label {
+    font-size: 16px; letter-spacing: 2px; margin-bottom: 15px; color: #fff; font-weight: 700; text-transform: uppercase;
+  }
+  .p10-card .value {
+    font-size: 72px; font-weight: 900; margin: 10px 0; color: #fff; line-height: 1; text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  }
   .p10-card .unit { font-size: 18px; color: #fff; font-weight: 600; }
   .p10-card.p90 { background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%); border: 3px solid #ff5252; }
   .p10-card.p50 { background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%); border: 3px solid #42a5f5; }
   .p10-card.p10 { background: linear-gradient(135deg, #00796b 0%, #009688 100%); border: 3px solid #26a69a; }
   
   .p10-subtitle {
-    text-align: center; margin-top: 30px; font-size: 18px; color: #00e5ff; font-weight: 700; letter-spacing: 1px;
+    text-align: center; margin-top: 25px; font-size: 18px; color: #00e5ff; font-weight: 700; letter-spacing: 1px;
   }
   
   /* NAVIGATION */
   .nav-controls { position: fixed; bottom: 30px; right: 30px; display: flex; gap: 12px; z-index: 100; }
   .nav-btn {
-    width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(135deg, #00bcd4, #00e5ff);
-    color: #0a1929; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center;
+    width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #00bcd4, #00e5ff);
+    color: #0a1929; border: none; font-size: 24px; cursor: pointer; display: flex; align-items: center;
     justify-content: center; font-weight: 900; box-shadow: 0 6px 20px rgba(0, 188, 212, 0.5); transition: all 0.3s;
   }
   .nav-btn:hover { background: linear-gradient(135deg, #00e5ff, #00bcd4); transform: scale(1.1); }
@@ -413,14 +492,14 @@
   
   .slide-counter {
     position: fixed; bottom: 30px; left: 30px; background: linear-gradient(135deg, #00bcd4, #00e5ff);
-    color: #0a1929; padding: 8px 16px; border-radius: 15px; font-size: 14px; z-index: 100; font-weight: 800;
+    color: #0a1929; padding: 10px 18px; border-radius: 20px; font-size: 15px; z-index: 100; font-weight: 800;
     box-shadow: 0 6px 20px rgba(0, 188, 212, 0.5);
   }
 </style>
 </head>
 <body>
 
-<!-- SLIDE 1: ТИТУЛЬНЫЙ -->
+<!-- SLIDE 1 -->
 <section class="slide slide-1 active" id="slide1">
   <div class="team-name">ЯНВАРЬ</div>
   <div class="group">ГРУППА НДБ-25-6</div>
@@ -431,7 +510,7 @@
   </div>
 </section>
 
-<!-- SLIDE 2: СОСТАВ КОМАНДЫ -->
+<!-- SLIDE 2 -->
 <section class="slide" id="slide2">
   <h2 class="slide-title">Состав команды</h2>
   <div class="team-photos">
@@ -450,7 +529,7 @@
   </div>
 </section>
 
-<!-- SLIDE 3: ДОРОЖНАЯ КАРТА -->
+<!-- SLIDE 3 -->
 <section class="slide" id="slide3">
   <h2 class="slide-title">Дорожная карта</h2>
   <div class="slide-3-content">
@@ -519,13 +598,11 @@
   </div>
 </section>
 
-<!-- SLIDE 4: ОБЩАЯ ИНФОРМАЦИЯ -->
+<!-- SLIDE 4 -->
 <section class="slide" id="slide4">
   <h2 class="slide-title">Общая информация</h2>
   <div class="slide-4-content">
-    <div class="map-container">
-      📍 КАРТА МЕСТОРОЖДЕНИЯ
-    </div>
+    <div class="map-container">📍 КАРТА МЕСТОРОЖДЕНИЯ</div>
     <div class="info-text">
       <h3>Январское месторождение</h3>
       <p>Месторождение находится в северо-западной части полуострова Ямал в Нурминском нефтегазоносном районе.</p>
@@ -545,7 +622,7 @@
   </div>
 </section>
 
-<!-- SLIDE 5: ПОДСЧЕТ ЗАПАСОВ -->
+<!-- SLIDE 5: ИСПРАВЛЕННЫЙ -->
 <section class="slide" id="slide5">
   <h2 class="slide-title">Подсчет запасов</h2>
   <div class="slide-5-content">
@@ -560,9 +637,7 @@
         <b>B<sub>g</sub></b> = 0.00484 м³/м³
       </div>
     </div>
-    <div class="block block-map">
-      🗺️ КАРТА ЭФФЕКТИВНЫХ ТОЛЩИН
-    </div>
+    <div class="block-map">🗺️ КАРТА ЭФФЕКТИВНЫХ ТОЛЩИН</div>
     <div class="block">
       <h4>Алгоритм</h4>
       <div class="params-list">
@@ -574,7 +649,7 @@
         6. Подсчёт геологических запасов G
       </div>
     </div>
-    <div class="block block-result">
+    <div class="block-result">
       <h4>Результат</h4>
       <div class="results-grid">
         <div class="res-item">
@@ -591,14 +666,12 @@
   </div>
 </section>
 
-<!-- SLIDE 6: АНАЛОГИ -->
+<!-- SLIDE 6 -->
 <section class="slide" id="slide6">
   <h2 class="slide-title">Аналоги для вероятностной оценки</h2>
   <div class="slide-6-content">
-    <div style="display:flex;flex-direction:column;height:100%;">
-      <div class="analog-map" style="flex:1;">
-        КАРТА ЗАПАДНОЙ СИБИРИ
-      </div>
+    <div class="analog-map-wrapper">
+      <div class="analog-map">КАРТА ЗАПАДНОЙ СИБИРИ</div>
       <div class="analog-caption">Примеры пластов</div>
     </div>
     <div class="table-wrap">
@@ -682,7 +755,7 @@
   </div>
 </section>
 
-<!-- SLIDE 7: P10 P50 P90 -->
+<!-- SLIDE 7 -->
 <section class="slide" id="slide7">
   <h2 class="slide-title">Вероятностная оценка P10–P50–P90</h2>
   <div class="slide-7-content">
@@ -703,7 +776,7 @@
         <div class="unit">млрд м³ газа</div>
       </div>
     </div>
-    <div class="p10-subtitle">Метод Монте-Карло · 20 000 реализаций · учёт неопределённости (1 разведочная скважина)</div>
+    <div class="p10-subtitle">Метод Монте-Карло · 20 000 реализаций · учёт неопределённости</div>
   </div>
 </section>
 
